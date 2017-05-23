@@ -1,0 +1,9 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios,'8.0'
+
+workspace 'HMAuthDemo'
+
+target :HMAuthDemo do
+  xcodeproj 'HMAuthDemo'
+   pod 'libHuamiSDK', :git => 'https://github.com/huamiLilg/HMiOSAuthSDK.git'
+end
