@@ -1,0 +1,2 @@
+# HMiOSAuthSDK
+huami auth sdk

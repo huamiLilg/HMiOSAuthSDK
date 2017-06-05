@@ -1,0 +1,1 @@
+../../../../libHuamiSDK/libHuamiSDK/libHuamiSDK.framework/Headers/HMApiObject.h

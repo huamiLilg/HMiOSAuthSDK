@@ -14,8 +14,7 @@
 		90444AC61ED4287E002CCE81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90444AC41ED4287E002CCE81 /* LaunchScreen.storyboard */; };
 		90444AD31ED42CAE002CCE81 /* HMAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90444AD11ED42CAE002CCE81 /* HMAuthViewController.m */; };
 		90444AD41ED42CAE002CCE81 /* HMAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90444AD21ED42CAE002CCE81 /* HMAuthViewController.xib */; };
-		90444ADB1ED42D20002CCE81 /* libHuamiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90444AD91ED42D17002CCE81 /* libHuamiSDK.framework */; };
-		90444ADC1ED42D20002CCE81 /* libHuamiSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 90444AD91ED42D17002CCE81 /* libHuamiSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B74ADE23EB30F8C9E783CDA1 /* libPods-HMAuthDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE0E970573F78369377C3C3 /* libPods-HMAuthDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +24,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				90444ADC1ED42D20002CCE81 /* libHuamiSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,6 +31,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6D2D5AA827D9AFF40DDBA43D /* Pods-HMAuthDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HMAuthDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HMAuthDemo/Pods-HMAuthDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		8730981D34F3A9CD97FD839D /* Pods-HMAuthDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HMAuthDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HMAuthDemo/Pods-HMAuthDemo.release.xcconfig"; sourceTree = "<group>"; };
 		90444AB31ED4287E002CCE81 /* HMAuthDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMAuthDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90444AB71ED4287E002CCE81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90444AB91ED4287E002CCE81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		90444AD01ED42CAE002CCE81 /* HMAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMAuthViewController.h; sourceTree = "<group>"; };
 		90444AD11ED42CAE002CCE81 /* HMAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMAuthViewController.m; sourceTree = "<group>"; };
 		90444AD21ED42CAE002CCE81 /* HMAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMAuthViewController.xib; sourceTree = "<group>"; };
-		90444AD91ED42D17002CCE81 /* libHuamiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libHuamiSDK.framework; sourceTree = "<group>"; };
+		CCE0E970573F78369377C3C3 /* libPods-HMAuthDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HMAuthDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,19 +52,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90444ADB1ED42D20002CCE81 /* libHuamiSDK.framework in Frameworks */,
+				B74ADE23EB30F8C9E783CDA1 /* libPods-HMAuthDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2054EA4FDF916953767E6D0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCE0E970573F78369377C3C3 /* libPods-HMAuthDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6AB71A659BBC21370A0D608B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D2D5AA827D9AFF40DDBA43D /* Pods-HMAuthDemo.debug.xcconfig */,
+				8730981D34F3A9CD97FD839D /* Pods-HMAuthDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		90444AAA1ED4287E002CCE81 = {
 			isa = PBXGroup;
 			children = (
-				90444AD81ED42D17002CCE81 /* libHuamiSDK */,
 				90444AB51ED4287E002CCE81 /* HMAuthDemo */,
 				90444AB41ED4287E002CCE81 /* Products */,
+				6AB71A659BBC21370A0D608B /* Pods */,
+				2054EA4FDF916953767E6D0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +119,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		90444AD81ED42D17002CCE81 /* libHuamiSDK */ = {
-			isa = PBXGroup;
-			children = (
-				90444AD91ED42D17002CCE81 /* libHuamiSDK.framework */,
-			);
-			path = libHuamiSDK;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,10 +126,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90444ACA1ED4287E002CCE81 /* Build configuration list for PBXNativeTarget "HMAuthDemo" */;
 			buildPhases = (
+				02EC4BD1D550DC90D1ECB311 /* [CP] Check Pods Manifest.lock */,
 				90444AAF1ED4287E002CCE81 /* Sources */,
 				90444AB01ED4287E002CCE81 /* Frameworks */,
 				90444AB11ED4287E002CCE81 /* Resources */,
 				90444AD71ED42CD9002CCE81 /* Embed Frameworks */,
+				005A87E058667BF8D9D30773 /* [CP] Embed Pods Frameworks */,
+				756CDFEB12C3BB1D1F0E5627 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,6 +190,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		005A87E058667BF8D9D30773 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HMAuthDemo/Pods-HMAuthDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		02EC4BD1D550DC90D1ECB311 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		756CDFEB12C3BB1D1F0E5627 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HMAuthDemo/Pods-HMAuthDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		90444AAF1ED4287E002CCE81 /* Sources */ = {
@@ -303,6 +364,7 @@
 		};
 		90444ACB1ED4287E002CCE81 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D2D5AA827D9AFF40DDBA43D /* Pods-HMAuthDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BPBCHD64GW;
@@ -320,6 +382,7 @@
 		};
 		90444ACC1ED4287E002CCE81 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8730981D34F3A9CD97FD839D /* Pods-HMAuthDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BPBCHD64GW;
@@ -354,6 +417,7 @@
 				90444ACC1ED4287E002CCE81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

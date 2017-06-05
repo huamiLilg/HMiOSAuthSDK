@@ -5,5 +5,5 @@ workspace 'HMAuthDemo'
 
 target :HMAuthDemo do
   xcodeproj 'HMAuthDemo'
-   pod 'libHuamiSDK', :git => 'https://github.com/huamiLilg/HMiOSAuthSDK.git'
+    pod 'libHuamiSDK', :git => 'https://github.com/huamiLilg/HMiOSAuthSDK.git'
 end
