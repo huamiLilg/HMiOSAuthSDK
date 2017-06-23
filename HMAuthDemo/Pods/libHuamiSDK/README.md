@@ -1,2 +1,2 @@
 # HMiOSAuthSDK
-huami auth sdk
+华米官方授权SDK

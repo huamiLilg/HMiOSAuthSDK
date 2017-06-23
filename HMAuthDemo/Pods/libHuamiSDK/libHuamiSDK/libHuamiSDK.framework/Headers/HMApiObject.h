@@ -48,11 +48,6 @@ typedef NS_ENUM(NSUInteger, HMAppRequestType) {
 @property (nonatomic, copy) NSString *appId;
 
 /**
- 当前应用的bundleId
- */
-@property (nonatomic, copy) NSString *bundleId;
-
-/**
  第三方程序发送时用来标识其请求的唯一性的标志，由第三方程序调用sendReq时传入，由华米应用终端回传,可不传
  */
 @property (nonatomic, copy) NSString *identifying;
@@ -89,6 +84,11 @@ typedef NS_ENUM(NSUInteger, HMAppRequestType) {
  第三方程序发送时用来标识其请求的唯一性的标志，由第三方程序调用sendReq时传入，由华米应用终端回传,可不传
  */
 @property (nonatomic, copy) NSString *identifying;
+
+/**
+ 由华米应用终端回传的bundleId
+ */
+@property (nonatomic, copy) NSString *bundleId;
 
 @end
 
