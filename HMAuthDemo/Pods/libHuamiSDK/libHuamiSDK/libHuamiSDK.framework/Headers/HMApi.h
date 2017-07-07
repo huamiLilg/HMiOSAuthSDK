@@ -15,14 +15,18 @@
 
  - HMApiAuthPolicyHealthOnly:   只用华米健康
  - HMApiAuthPolicyMiFitOnly:    只用小米运动
+ - HMApiAuthPolicyWatchOnly:    只用手表助手
  - HMApiAuthPolicyHealthFirst:  优先使用华米健康(在华米健康不可用的情况下会选择其他可支持授权的应用)
  - HMApiAuthPolicyMiFitFirst:   优先使用小米运动(在小米运动不可用的情况下会选择其他可支持授权的应用)
+ - HMApiAuthPolicyWatchFirst:   优先使用手表助手(在手表助手不可用的情况下会选择其他可支持授权的应用)
  */
 typedef NS_ENUM(NSUInteger, HMApiAuthPolicy) {
     HMApiAuthPolicyHealthOnly         = 0,
     HMApiAuthPolicyMiFitOnly          = 1,
-    HMApiAuthPolicyHealthFirst        = 2,
-    HMApiAuthPolicyMiFitFirst         = 3,
+    HMApiAuthPolicyWatchOnly          = 2,
+    HMApiAuthPolicyHealthFirst        = 3,
+    HMApiAuthPolicyMiFitFirst         = 4,
+    HMApiAuthPolicyWatchFirst         = 5,
 };
 
 /**
@@ -55,7 +59,7 @@ typedef NS_ENUM(NSUInteger, HMApiAuthPolicy) {
  向华米应用注册第三方应用
  
  需要在每次启动第三方应用程序时调用
- @param appid 华米开发者ID
+ @param appid 华米开发者ID,在线下申请的基础上加上hm前缀
  @param authPolicy 授权策略
  @return 成功返回YES，失败返回NO。
  */
@@ -115,4 +119,7 @@ typedef NS_ENUM(NSUInteger, HMApiAuthPolicy) {
  */
 + (BOOL)sendRequest:(HMBaseRequest *)request;
 
+
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
 @end

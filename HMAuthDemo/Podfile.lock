@@ -10,12 +10,12 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   libHuamiSDK:
-    :commit: eadb8943f2bf00f6c881aab2c97363754563993b
+    :commit: ed636f80b8a44a805c419eaac39cea156e1c8498
     :git: https://github.com/huamiLilg/HMiOSAuthSDK.git
 
 SPEC CHECKSUMS:
   libHuamiSDK: 1c1778ceac6737f9026eef9b6deefc081a07a00d
 
-PODFILE CHECKSUM: 55eba2267016b892130501d65ef03edf8dd989c5
+PODFILE CHECKSUM: 60d220b903ec25eedc12faa75ae1d4ceaa4e2313
 
 COCOAPODS: 1.2.1

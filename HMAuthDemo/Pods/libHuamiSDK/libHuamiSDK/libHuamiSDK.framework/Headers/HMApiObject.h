@@ -90,6 +90,11 @@ typedef NS_ENUM(NSUInteger, HMAppRequestType) {
  */
 @property (nonatomic, copy) NSString *bundleId;
 
+/**
+ 加密描述
+ */
+@property (nonatomic, copy) NSString *cipher;
+
 @end
 
 
