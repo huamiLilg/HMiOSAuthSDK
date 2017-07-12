@@ -20,11 +20,12 @@ typedef  void (^HMApiParseToolQueryHandler)(NSString *query);
  将请求Model转换为Query
  
  @param request HMBaseRequest
+ @param encrypted 是否允许加密
  @param handler 组装回调
  @return YES-组装成功
  */
-+ (BOOL)queryWithRequest:(HMBaseRequest *)request handler:(HMApiParseToolQueryHandler)handler;
-
++ (BOOL)queryWithRequest:(HMBaseRequest *)request encrypted:(BOOL)encrypted handler:(HMApiParseToolQueryHandler)handler;
+    
 /**
  将从华米健康返回的query转换为HMBaseResponse子类
 
