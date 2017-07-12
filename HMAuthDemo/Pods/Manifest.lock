@@ -10,7 +10,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   libHuamiSDK:
-    :commit: bea9412a6c3fd52d1cb53481104d63bb07adbfde
+    :commit: a2dbf6a2be6880032416f3108fba311a3d494bb0
     :git: https://github.com/huamiLilg/HMiOSAuthSDK.git
 
 SPEC CHECKSUMS:
