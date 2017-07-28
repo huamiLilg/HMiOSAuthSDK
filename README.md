@@ -2,6 +2,7 @@
 # 华米官方授权SDK
 # 环境配置文档链接地址：https://github.com/huamitech/rest-api/wiki/SDK-for-iOS
 # API介绍
+<pre><code>
 /**
  华米授权策略
 
@@ -123,3 +124,4 @@ typedef NS_ENUM(NSUInteger, HMApiAuthPolicy) {
  @return 成功返回YES，失败返回NO。
  */
 + (BOOL)sendRequest:(HMBaseRequest *)request;
+</code></pre>
