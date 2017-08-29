@@ -51,6 +51,8 @@
 		<string>midongauth</string>
 		<string>mifit</string>
 		<string>mifitauth</string>
+		<string>huamiwatch</string>
+		<string>watchauth</string>
 	</array>
 </dict>
 </plist>
