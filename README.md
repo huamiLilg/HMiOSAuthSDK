@@ -1,6 +1,8 @@
 # HMiOSAuthSDK
 # 华米官方授权SDK
 # 环境配置文档链接地址：https://github.com/huamitech/rest-api/wiki/SDK-for-iOS
+# Feature
+  ## 2017-08-29 tag 1.0.1 demo支持手表助手授权
 # API介绍
 <pre><code>
 /**
