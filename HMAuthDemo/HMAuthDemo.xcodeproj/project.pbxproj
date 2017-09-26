@@ -14,6 +14,7 @@
 		90444AC61ED4287E002CCE81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90444AC41ED4287E002CCE81 /* LaunchScreen.storyboard */; };
 		90444AD31ED42CAE002CCE81 /* HMAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90444AD11ED42CAE002CCE81 /* HMAuthViewController.m */; };
 		90444AD41ED42CAE002CCE81 /* HMAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90444AD21ED42CAE002CCE81 /* HMAuthViewController.xib */; };
+		90E68F991F62B99C000526CB /* libHuamiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E68F981F62B99C000526CB /* libHuamiSDK.framework */; };
 		B74ADE23EB30F8C9E783CDA1 /* libPods-HMAuthDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE0E970573F78369377C3C3 /* libPods-HMAuthDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		90444AD01ED42CAE002CCE81 /* HMAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMAuthViewController.h; sourceTree = "<group>"; };
 		90444AD11ED42CAE002CCE81 /* HMAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMAuthViewController.m; sourceTree = "<group>"; };
 		90444AD21ED42CAE002CCE81 /* HMAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMAuthViewController.xib; sourceTree = "<group>"; };
+		90E68F981F62B99C000526CB /* libHuamiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libHuamiSDK.framework; path = ../libHuamiSDK/libHuamiSDK.framework; sourceTree = "<group>"; };
 		CCE0E970573F78369377C3C3 /* libPods-HMAuthDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HMAuthDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E68F991F62B99C000526CB /* libHuamiSDK.framework in Frameworks */,
 				B74ADE23EB30F8C9E783CDA1 /* libPods-HMAuthDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +65,7 @@
 		2054EA4FDF916953767E6D0F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				90E68F981F62B99C000526CB /* libHuamiSDK.framework */,
 				CCE0E970573F78369377C3C3 /* libPods-HMAuthDemo.a */,
 			);
 			name = Frameworks;
@@ -370,11 +374,15 @@
 				DEVELOPMENT_TEAM = BPBCHD64GW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/libHuamiSDK",
+					"\"$(SRCROOT)/../libHuamiSDK\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../libHuamiSDK\"",
 				);
 				INFOPLIST_FILE = HMAuthDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks \"$(SRCROOT)/../libHuamiSDK\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huami.HMAuthPartnerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -388,11 +396,15 @@
 				DEVELOPMENT_TEAM = BPBCHD64GW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/libHuamiSDK",
+					"\"$(SRCROOT)/../libHuamiSDK\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../libHuamiSDK\"",
 				);
 				INFOPLIST_FILE = HMAuthDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks \"$(SRCROOT)/../libHuamiSDK\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huami.HMAuthPartnerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
