@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|  
-	s.name             = "libHuamiSDK"  
+	s.name             = "libHuamiSDK" 
 	s.version          = "1.0.3"  
 	s.summary          = "hua mi auth SDK"  
 	s.homepage         = "https://github.com/huamiLilg/HMiOSAuthSDK"  
@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
 	s.ios.deployment_target = '8.0'  
 	s.requires_arc = true  
 
+	s.user_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
 	s.ios.vendored_frameworks = 'libHuamiSDK/*.framework'
 	s.frameworks = 'Foundation', 'CoreGraphics', 'UIKit'
 end  
