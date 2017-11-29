@@ -1,21 +1,12 @@
 PODS:
-  - libHuamiSDK (1.0.0)
+  - libHuamiSDK (1.0.5)
 
 DEPENDENCIES:
-  - libHuamiSDK (from `https://github.com/huamiLilg/HMiOSAuthSDK.git`)
-
-EXTERNAL SOURCES:
-  libHuamiSDK:
-    :git: https://github.com/huamiLilg/HMiOSAuthSDK.git
-
-CHECKOUT OPTIONS:
-  libHuamiSDK:
-    :commit: a2dbf6a2be6880032416f3108fba311a3d494bb0
-    :git: https://github.com/huamiLilg/HMiOSAuthSDK.git
+  - libHuamiSDK (~> 1.0.5)
 
 SPEC CHECKSUMS:
-  libHuamiSDK: 1c1778ceac6737f9026eef9b6deefc081a07a00d
+  libHuamiSDK: 3f5b273c6e253b07e32fa98f0f7bd6049cc92797
 
-PODFILE CHECKSUM: 60d220b903ec25eedc12faa75ae1d4ceaa4e2313
+PODFILE CHECKSUM: 8e27d86360b592b462788442d60ba76bead5557e
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1
