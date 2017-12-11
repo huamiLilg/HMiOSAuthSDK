@@ -41,7 +41,7 @@
 			<string>huami</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>hme8f70b0f-814d-482a-89db-ab25a8a59539</string>
+				<string>$(PRODUCT_BUNDLE_IDENTIFIER).e8f70b0f-814d-482a-89db-ab25a8a59539</string>
 			</array>
 		</dict>
 	</array>

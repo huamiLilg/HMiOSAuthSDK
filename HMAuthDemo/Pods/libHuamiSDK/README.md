@@ -3,6 +3,7 @@
 # 环境配置文档链接地址：https://github.com/huamitech/rest-api/wiki/SDK-for-iOS
 # Feature
   ## 2017-08-29 tag 1.0.1 demo支持手表助手授权
+  ## 2017-12-11 tag 1.1.0 SDK支持不同的App使用相同的APPID，注册API变更，需要做响应改动
 # API介绍
 <pre><code>
 /**
@@ -51,27 +52,24 @@ typedef NS_ENUM(NSUInteger, HMApiAuthPolicy) {
 @interface HMApi : NSObject
 
 /**
- 向华米应用注册第三方应用,不进行加密
- 
+ 向华米应用注册第三方应用,不进行加密,【推荐】
+
  需要在每次启动第三方应用程序时调用
- @param appid 华米开发者ID,在线下申请的基础上加上hm前缀
  @param authPolicy 授权策略
  @return 成功返回YES，失败返回NO。
  */
-+ (BOOL)registerApp:(NSString *)appid authPolicy:(HMApiAuthPolicy)authPolicy;
++ (BOOL)registerAppWithAuthPolicy:(HMApiAuthPolicy)authPolicy;
 
 
 /**
- 向华米应用注册第三方应用
+ 向华米应用注册第三方应用,不进行加密
  
  需要在每次启动第三方应用程序时调用
- @param appid 华米开发者ID,在线下申请的基础上加上hm前缀
  @param authPolicy 授权策略
  @param encrypted 是否采用加密，YES 则授权成功后的token信息会加密
  @return 成功返回YES，失败返回NO。
- 
  */
-+ (BOOL)registerApp:(NSString *)appid authPolicy:(HMApiAuthPolicy)authPolicy encrypted:(BOOL)encrypted;
++ (BOOL)registerAppWithAuthPolicy:(HMApiAuthPolicy)authPolicy encrypted:(BOOL)encrypted;
 
 /**
  处理华米应用通过URL启动App时传递的数据

@@ -21,8 +21,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [HMApi registerApp:@"hme8f70b0f-814d-482a-89db-ab25a8a59539" authPolicy:HMApiAuthPolicyMiFitFirst];
-    
+    [HMApi registerAppWithAuthPolicy:HMApiAuthPolicyMiFitFirst];
+
     HMAuthViewController *viewController = [[HMAuthViewController alloc] init];
     self.controller = viewController;
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
