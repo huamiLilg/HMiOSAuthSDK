@@ -19,6 +19,7 @@
  - HMApiAuthPolicyHealthFirst:  优先使用华米健康(在华米健康不可用的情况下会选择其他可支持授权的应用)
  - HMApiAuthPolicyMiFitFirst:   优先使用小米运动(在小米运动不可用的情况下会选择其他可支持授权的应用)
  - HMApiAuthPolicyWatchFirst:   优先使用手表助手(在手表助手不可用的情况下会选择其他可支持授权的应用)
+ - HMApiAuthPolicyCount:        计数使用，外部不可使用
  */
 typedef NS_ENUM(NSUInteger, HMApiAuthPolicy) {
     HMApiAuthPolicyHealthOnly         = 0,
@@ -27,6 +28,7 @@ typedef NS_ENUM(NSUInteger, HMApiAuthPolicy) {
     HMApiAuthPolicyHealthFirst        = 3,
     HMApiAuthPolicyMiFitFirst         = 4,
     HMApiAuthPolicyWatchFirst         = 5,
+    HMApiAuthPolicyCount              = 6,
 };
 
 /**

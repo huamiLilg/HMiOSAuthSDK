@@ -3,7 +3,7 @@
 # 环境配置文档链接地址：https://github.com/huamitech/rest-api/wiki/SDK-for-iOS
 # Feature
   ## 2017-08-29 tag 1.0.1 demo支持手表助手授权
-  ## 2017-12-11 tag 1.1.0 SDK支持不同的App使用相同的APPID，注册API变更，需要做响应改动
+  ## 2017-12-11 tag 1.1.1 SDK支持不同的App使用相同的APPID，注册API变更，需要做响应改动
 # API介绍
 <pre><code>
 /**
