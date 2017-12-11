@@ -56,6 +56,25 @@ typedef NS_ENUM(NSUInteger, HMApiAuthPolicy) {
 @interface HMApi : NSObject
 
 /**
+ 向华米应用注册第三方应用,不进行加密,【推荐】
+
+ 需要在每次启动第三方应用程序时调用
+ @param authPolicy 授权策略
+ @return 成功返回YES，失败返回NO。
+ */
++ (BOOL)registerAppWithAuthPolicy:(HMApiAuthPolicy)authPolicy;
+
+/**
+ 向华米应用注册第三方应用,不进行加密
+ 
+ 需要在每次启动第三方应用程序时调用
+ @param authPolicy 授权策略
+ @param encrypted 是否采用加密，YES 则授权成功后的token信息会加密
+ @return 成功返回YES，失败返回NO。
+ */
++ (BOOL)registerAppWithAuthPolicy:(HMApiAuthPolicy)authPolicy encrypted:(BOOL)encrypted;
+
+/**
  向华米应用注册第三方应用,不进行加密
  
  需要在每次启动第三方应用程序时调用
@@ -63,7 +82,7 @@ typedef NS_ENUM(NSUInteger, HMApiAuthPolicy) {
  @param authPolicy 授权策略
  @return 成功返回YES，失败返回NO。
  */
-+ (BOOL)registerApp:(NSString *)appid authPolicy:(HMApiAuthPolicy)authPolicy;
++ (BOOL)registerApp:(NSString *)appid authPolicy:(HMApiAuthPolicy)authPolicy __attribute__ ((deprecated("deprecated(1.1.0) use registerAppWithAuthPolicy: instead")));
 
 
 /**
@@ -76,7 +95,7 @@ typedef NS_ENUM(NSUInteger, HMApiAuthPolicy) {
  @return 成功返回YES，失败返回NO。
  
  */
-+ (BOOL)registerApp:(NSString *)appid authPolicy:(HMApiAuthPolicy)authPolicy encrypted:(BOOL)encrypted;
++ (BOOL)registerApp:(NSString *)appid authPolicy:(HMApiAuthPolicy)authPolicy encrypted:(BOOL)encrypted __attribute__ ((deprecated("deprecated(1.1.0) use registerAppWithAuthPolicy: encrypted: instead")));
 
 /**
  处理华米应用通过URL启动App时传递的数据
