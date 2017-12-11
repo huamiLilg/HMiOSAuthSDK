@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|  
 	s.name             = "libHuamiSDK" 
-	s.version          = "1.1.0"  
+	s.version          = "1.1.1"  
 	s.summary          = "hua mi auth SDK"  
 	s.homepage         = "https://github.com/huamiLilg/HMiOSAuthSDK"  
 	s.license          = 'MIT'  
