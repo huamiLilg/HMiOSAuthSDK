@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  HMAuthDemo
+//  HMAuthPartnerDemo
 //
-//  Created by 李林刚 on 2017/5/23.
+//  Created by 李林刚 on 2017/4/24.
 //  Copyright © 2017年 huami. All rights reserved.
 //
 
@@ -13,26 +13,33 @@
 
 @interface AppDelegate ()<HMApiDelegate>
 
-@property (nonatomic, strong) HMAuthViewController *controller;
-
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [HMApi registerAppWithAuthPolicy:HMApiAuthPolicyMiFitFirst];
-
+    /*
+     注意：
+     - HMApiAuthPolicyHealthOnly:   只用华米健康
+     - HMApiAuthPolicyMiFitOnly:    只用小米运动
+     - HMApiAuthPolicyWatchOnly:    只用手表助手
+     
+     授权策略只能使用以上三个，在华米各个应用数据没打通之前，后面三个选项使用也是多余的，反而会引起不必要的疑问，切记！！！
+     */
+    [HMApi registerAppWithAuthPolicy:HMApiAuthPolicyMiFitOnly];
+    
     HMAuthViewController *viewController = [[HMAuthViewController alloc] init];
-    self.controller = viewController;
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(id)annotation {
+    return [HMApi handleOpenURL:url delegate:self];
+}
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
     return [HMApi handleOpenURL:url delegate:self];
@@ -46,10 +53,6 @@
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"授权成功" message:nil preferredStyle:UIAlertControllerStyleAlert];
             [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil]];
             [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
-            
-            HMSendAuthResponse *authResponse = (HMSendAuthResponse *)response;
-            NSString *string = [NSString stringWithFormat:@"accessToken = %@\nexpiresIn=%lld\nrefreshToken=%@\ntokenType=%@\n",authResponse.accessToken,authResponse.expiresIn,authResponse.refreshToken,authResponse.tokenType];
-            self.controller.authInfoTextView.text = string;
         }
     } else if (response.errorCode == HMApiErrCodeUserCancel){
         if (response.type == HMAppRequestTypeAuth) {
@@ -62,13 +65,9 @@
             UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"授权失败" message:response.errorMessage preferredStyle:UIAlertControllerStyleAlert];
             [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil]];
             [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
-            
-            HMSendAuthResponse *authResponse = (HMSendAuthResponse *)response;
-            NSString *string = [NSString stringWithFormat:@"code = %ld\nmessage=%@",(long)authResponse.detailCode,authResponse.errorMessage];
-            self.controller.authInfoTextView.text = string;
         }
     }
-    
+
 }
 
 @end

@@ -25,19 +25,22 @@
 }
 
 - (IBAction)openButtonAction:(id)sender {
-    [HMApi openAppCompletionHandler:^(BOOL success) {
-        if (!success) {
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"打开失败" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-            [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:nil]];
-            [self presentViewController:alertController animated:YES completion:nil];
-        }
-    }];
+    if ([HMApi isAppInstalled]) {
+        //是否安装对应的应用，一定要使用SDK提供的API。安装不一定支持授权
+        [HMApi openAppCompletionHandler:^(BOOL success) {
+            
+        }];
+    }
 }
 
 - (IBAction)authButtonAction:(id)sender {
-    self.authInfoTextView.text = @"";
-    HMSendAuthRequest *authRequest = [[HMSendAuthRequest alloc] init];
-    [HMApi sendRequest:authRequest];
+    if ([HMApi isAppSupportApi]) {
+        //是否支持授权，一定要使用SDK提供的API。支持授权的一定已经安装了
+        HMSendAuthRequest *authRequest = [[HMSendAuthRequest alloc] init];
+        [HMApi sendRequest:authRequest];
+    } else {
+        [self showAlertTitle:@"不支持授权" message:@"在调用也没用"];
+    }
 }
 
 #pragma mark - Private Methods
